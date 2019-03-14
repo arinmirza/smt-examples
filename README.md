@@ -19,7 +19,7 @@ Note that anything more than 30 cells take an indefinite amount of time to solve
 
 - [SAT/SMT with Examples by Dennis Yurichev](https://yurichev.com/writings/SAT_SMT_by_example.pdf)
 - [SMT-LIBv2 Language and Tools Tutorial](https://www.lri.fr/~conchon/TER/2013/2/SMTLIB2.pdf)
-- [Z3 Tutorial on Rise4Fun](https://rise4fun.com/Z3/tutorial/guide) or alternatively PDF](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.225.8231&rep=rep1&type=pdf)
+- [Z3 Tutorial on Rise4Fun](https://rise4fun.com/Z3/tutorial/guide) or [alternatively as PDF](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.225.8231&rep=rep1&type=pdf)
 - [Z3Py Tutorial for Python, includes short implementations for Sudoku and Eight Queens problems](https://www.notion.so/arinmirza/Project-Z3-Theorem-Solver-08065fa6f1a0450b8c943e3ba5456c16#77361ec737ee471888cd5709d8e0ec6f)
 - [Z3Py API Namespace Reference](https://z3prover.github.io/api/html/namespacez3py.html)
 - [Breadth First Traversal of a Directed Graph in Z3](https://medium.com/@rvprasad/sat-encoding-breadth-first-traversal-of-directed-graph-b571fc68c1af)
