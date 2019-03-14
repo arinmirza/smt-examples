@@ -2,8 +2,9 @@ from z3 import *
 import pprint, math
 import sys, argparse
 
+# This implementation is influenced by the related example of Dennis Yurichev, please see https://yurichev.com/writings/SAT_SMT_by_example.pdf#page=523
 
-# Chessboard Configurations
+# Parser Settings
 parser = argparse.ArgumentParser()
 parser.add_argument('--rows', help='Number of rows of the chessboard')
 parser.add_argument('--cols', help='Number of columns of the chessboard')
@@ -11,16 +12,17 @@ parser.add_argument('--x', help='Start x-coordinate of the knight')
 parser.add_argument('--y', help='Start y-coordinate of the knight')
 parser.add_argument('--closed', help='Whether the tour needs to be closed or not. If the knight ends on a square that is one knight\'s move from the beginning square, the tour is closed, otherwise it is open.')
 
+# Chessboard Configurations
 args = parser.parse_args()
 row_count = int(args.rows) if args.rows else 5
 col_count = int(args.cols) if args.cols else 5
 start_cell_row = int(args.x) if args.x else 0
 start_cell_col = int(args.y) if args.y else 0
 closed_tour = bool(args.closed) if args.closed else False
-
 cell_count = row_count * col_count
+
+# Initialize z3 solver
 solver = Solver()
-print("Solving, this may take long.")
 
 # Indices start from 0 and None denotes an index outside of the board
 def coord_to_index(row, col):
@@ -95,8 +97,9 @@ if not closed_tour:
 		or_clause = [V[v] == t for t in twos_powers]
 		solver.add(Or(*or_clause))
 
+print("Solving, this may take long.")
 
-# Print the solution
+# Solve and print
 if solver.check() == unsat:
 	print("unsat")
 	exit(0)
