@@ -7,7 +7,7 @@ Run the python script with the following optional parameters:
 
 `rows` and `cols` determine the size of the chessboard. `x` and `y` are the starting coordinates of the knight, where `x` and `y` are the starting row and column, respectively. If `closed` is set to true, solver will try to find a closed knight's tour.
 
-Note that anything more than 36 cells take an indefinite amount of time to solve. Otherwise please wait for at least a couple of minutes.
+Note that anything more than 30 cells take an indefinite amount of time to solve. Otherwise please wait for at least a couple of minutes.
 
 ## Requirements and Dependencies
 * Python 3
